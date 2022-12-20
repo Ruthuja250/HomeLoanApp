@@ -1,0 +1,55 @@
+﻿@model HomeLoanApp.Models.Email
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>EmailIndex</title>
+</head>
+<body style="background-color:black; color:white;">
+    <div>
+        @using (Html.BeginForm("EmailIndex", "Email", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <center>
+              <h3>Email Page</h3>
+                <h5>(Send email from here)</h5>
+                <hr />
+                <table>
+                    <tr>
+                        <td style="width:80px">
+                            To:
+                        </td>
+                        <td>@Html.TextBoxFor(model => model.To)</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Subject:
+                        </td>
+                        <td>
+                            @Html.TextBoxFor(model => model.Subject)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td valign="top">
+                            Body:
+                        </td>
+                        <td> @Html.TextAreaFor(model => model.Body, new { rows = "15", cols = "25" })</td>
+                    </tr>
+                    <tr >
+                        <td >
+                            <input type="submit" value="Send" />
+                        </td>
+                    </tr>
+                </table>
+                <br />
+                <span style="color:green">@ViewBag.Message</span>
+            </center>
+        }
+    </div>
+</body>
+</html>

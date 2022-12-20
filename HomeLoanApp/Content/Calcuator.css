@@ -1,0 +1,111 @@
+﻿ * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 0rem 2rem;
+    overflow-x: hidden;
+    font-family: "Segoe UI", Tsahoma, Geneva, Verdana, sans-serif;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url("https://img.freepik.com/premium-photo/personal-financial-planning-concept-loan-schedule-sheet-us-banknote-calculator-flat-lay-white-background_68339-52.jpg?w=2000");
+    background-size: cover;
+    background-position: center;
+}
+
+.main {
+    padding: 0rem 1rem;
+    min-height: 100vh;
+    height: auto;
+    min-width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#loan {
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+    #loan form {
+        padding: 0rem 2rem;
+        margin: 3rem 0rem;
+        display: flex;
+    }
+
+    #loan .card {
+        width: 70%;
+        background-color: transparent;
+        border-radius: 0;
+        border: 1px solid white;
+        color: white;
+    }
+
+        #loan .card .card-header {
+            border-bottom: 1px solid white;
+            text-align: center;
+            padding: 0.75rem 0rem;
+            font-size: 1.5rem;
+        }
+
+        #loan .card .card-body {
+            padding: 1.5rem 1rem;
+        }
+
+            #loan .card .card-body .form-control {
+                background-color: transparent;
+                border-radius: 0;
+                color: white;
+                font-weight: 700;
+                border: 1px solid white;
+                padding: 0.75rem 1rem;
+                width: 100%;
+                margin-top: 1rem;
+            }
+
+                #loan .card .card-body .form-control::-moz-placeholder {
+                    color: white;
+                }
+
+                #loan .card .card-body .form-control:-ms-input-placeholder {
+                    color: white;
+                }
+
+                #loan .card .card-body .form-control::placeholder {
+                    color: white;
+                }
+
+        #loan .card .card-footer {
+            border-top: 1px solid white;
+            padding: 0.75rem 0rem;
+            text-align: center;
+        }
+
+            #loan .card .card-footer .btn {
+                background-color: transparent;
+                border: 1px solid white;
+                color: white;
+                border-radius: 0;
+                padding: 0.75rem 2.5rem;
+            }
+
+                #loan .card .card-footer .btn:hover {
+                    background-color: white;
+                    color: black;
+                }
+
+#loanOutput,
+#emiOutput {
+    width: 70%;
+    border: 1px solid white;
+    display: block;
+    color: white;
+    margin-top: 2rem;
+}
+
+.pad {
+    padding: 1rem 0rem;
+}

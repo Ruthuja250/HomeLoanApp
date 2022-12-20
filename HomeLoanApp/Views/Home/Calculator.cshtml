@@ -1,0 +1,91 @@
+﻿
+@{
+    ViewBag.Title = "Calculator";
+}
+
+
+<h2>Calculator</h2>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <link href="~/Content/Calcuator.css" rel="stylesheet" />
+
+    <title>Loan Calculator</title>
+</head>
+
+<body>
+
+    <div class="main">
+        <div class="container-fluid" id="loan">
+            <div class="row">
+                <form id="loanForm">
+                    <div class="card col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 offset-lg-3">
+                        <div class="card-header text-light text-center">
+                            <h3>Loan Calculator</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="font-weight-bold text-light">
+                                Tip: Enter Your Net Monthly Salary to Check
+                                Eligible Loan Amount.
+                            </p>
+                            <input id="loanInp" required type="text" class="form-control"
+                                   placeholder="Enter Net Monthly Income">
+                        </div>
+                        <div class="card-footer text-center">
+                            <button type="submit" onclick="calculateLoan()" class="btn btn-outline-info">
+                                Calculate
+                                Loan
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+
+            </div>
+            <div id="loanOutput" class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 offset-lg-3"></div>
+        </div>
+
+        <div class="container-fluid" id="loan">
+            <div class="row">
+                <form id="emiForm">
+                    <div class="card col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 offset-lg-3">
+                        <div class="card-header text-light text-center">
+                            <h3>EMI Calculator</h3>
+                        </div>
+                        <div class="card-body">
+                            <p class="font-weight-bold text-light">
+                                Tip: Enter Your Eligible Loan Amount to Calculate
+                                EMI's.
+                            </p>
+                            <input id="emiLoan" required type="text" class="form-control"
+                                   placeholder="Enter Loan Amount">
+                            <input id="emiTenure" required type="text" class="form-control mt-3"
+                                   placeholder="Enter EMI Tenure (in months)">
+                        </div>
+                        <div class="card-footer text-center">
+                            <button type="submit" onclick="calculateEMI()" class="btn btn-outline-info">
+                                Calculate
+                                EMI
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <div id="emiOutput" class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-5 offset-lg-3"></div>
+        </div>
+
+    </div>
+
+    <!-- main js -->
+    <script src="./main.js"></script>
+    <script src="~/Scripts/Calcuator.js"></script>
+</body>
+
+</html>
