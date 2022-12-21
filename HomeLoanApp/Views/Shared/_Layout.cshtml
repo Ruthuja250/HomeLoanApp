@@ -28,11 +28,12 @@
                     <li>@Html.ActionLink("Register", "Register", "Account")</li>
 
 
+
                     @if (User.IsInRole("Admin"))
                     {
 
-                        <li>@Html.ActionLink("LoanDetails", "Index", "ApplicationForm")</li>
-                        <li>@Html.ActionLink("LoanDetails", "Create", "LoanDetails")</li>
+                        <li>@Html.ActionLink("Verification", "Index", "ApplicationForms")</li>
+                        <li>@Html.ActionLink("LoanAccount", "Create", "LoanDetails")</li>
                         <li>@Html.ActionLink("Email", "EmailIndex", "Email")</li>
                         <li> @Html.ActionLink("Logout", "Logout", "Account")</li>
                         <li><a href="">Dear @User.Identity.Name</a></li>
@@ -40,7 +41,7 @@
                     else if (User.IsInRole("User"))
                     {
                         <li>@Html.ActionLink("Account", "Account", "Home")</li>
-                        <li>@Html.ActionLink("ApplicationForm", "Create", "ApplicationForm")</li>
+                        <li>@Html.ActionLink("ApplicationForm", "Create", "ApplicationForms")</li>
                         <li> @Html.ActionLink("Logout", "Logout", "Account")</li>
                         <li><a href="">Dear @User.Identity.Name</a></li>
                     }

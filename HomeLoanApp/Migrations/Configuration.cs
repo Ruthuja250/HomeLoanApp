@@ -10,7 +10,6 @@ namespace HomeLoanApp.Migrations
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
-            ContextKey = "HomeLoanApp.Models.HomeLoanContext";
         }
 
         protected override void Seed(HomeLoanApp.Models.HomeLoanContext context)

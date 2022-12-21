@@ -5,6 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.Mvc;
 using HomeLoanApp.Models;
+using System.Net;
 
 
 namespace HomeLoanApp.Controllers
@@ -33,14 +34,22 @@ namespace HomeLoanApp.Controllers
             return View();
         }
 
-        public ActionResult account()
+        public ActionResult account(int? id)
         {
-            var UserId = (int)Session["UserId"];
-           var LoanData = db.Userss.Where(t =>t.UserId==UserId).FirstOrDefault();
            
-          
-               return View(LoanData);
-            }
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
+                LoanDetails loanDetails = db.LoanDetailss.Find(id);
+                if (loanDetails == null)
+                {
+                    return HttpNotFound();
+                }
+                return View(loanDetails);
+            
+           
+         }
            
            
         

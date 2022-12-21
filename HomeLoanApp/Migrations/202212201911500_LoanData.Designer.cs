@@ -7,13 +7,13 @@ namespace HomeLoanApp.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class InitialCreate : IMigrationMetadata
+    public sealed partial class LoanData : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(InitialCreate));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(LoanData));
         
         string IMigrationMetadata.Id
         {
-            get { return "202212171014365_InitialCreate"; }
+            get { return "202212201911500_LoanData"; }
         }
         
         string IMigrationMetadata.Source

@@ -140,16 +140,16 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ApplicationFormController.cs" />
+    <Compile Include="Controllers\ApplicationFormsController.cs" />
     <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\LoanDetailsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202212171014365_InitialCreate.cs" />
-    <Compile Include="Migrations\202212171014365_InitialCreate.Designer.cs">
-      <DependentUpon>202212171014365_InitialCreate.cs</DependentUpon>
+    <Compile Include="Migrations\202212201911500_LoanData.cs" />
+    <Compile Include="Migrations\202212201911500_LoanData.Designer.cs">
+      <DependentUpon>202212201911500_LoanData.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\ApplicationForm.cs" />
@@ -213,10 +213,17 @@
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\Email\EmailIndex.cshtml" />
     <Content Include="Views\Home\approvedetails.cshtml" />
+    <Content Include="Views\ApplicationForms\Create.cshtml" />
+    <Content Include="Views\ApplicationForms\Delete.cshtml" />
+    <Content Include="Views\ApplicationForms\Details.cshtml" />
+    <Content Include="Views\ApplicationForms\Edit.cshtml" />
+    <Content Include="Views\ApplicationForms\Index.cshtml" />
     <Content Include="Views\LoanDetails\Create.cshtml" />
+    <Content Include="Views\LoanDetails\Delete.cshtml" />
+    <Content Include="Views\LoanDetails\Details.cshtml" />
+    <Content Include="Views\LoanDetails\Edit.cshtml" />
     <Content Include="Views\LoanDetails\Index.cshtml" />
     <Content Include="Views\Home\account.cshtml" />
-    <Content Include="Views\ApplicationForm\Create.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -236,8 +243,8 @@
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202212171014365_InitialCreate.resx">
-      <DependentUpon>202212171014365_InitialCreate.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202212201911500_LoanData.resx">
+      <DependentUpon>202212201911500_LoanData.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

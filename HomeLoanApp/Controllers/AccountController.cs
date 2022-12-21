@@ -45,12 +45,14 @@ namespace HomeLoanApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = db.Userss.Where(x => x.Email == u.Email && x.Password == u.Password).ToList();
+                var user = db.Userss.Where(x => x.Email == u.Email && x.Password == u.Password && x.Role==u.Role).ToList();
                 if (user != null)
                 {
                     FormsAuthentication.SetAuthCookie(u.Email, false);
                     Session["Email"] = u.Email.ToString();
                     Session["Password"] = u.Password.ToString();
+                    Session["Role"] = u.Role.ToString();
+
                 }
                 
                     if(ReturnUrl!=null)

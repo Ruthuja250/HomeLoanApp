@@ -1,0 +1,90 @@
+﻿@model HomeLoanApp.Models.ApplicationForm
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>ApplicationForm</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Phone_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Phone_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DOB)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DOB)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Address)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Bank_Account_No)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Bank_Account_No)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Employeement_Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employeement_Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Organization_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Organization_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property_Location)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property_Location)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Property_Value)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Property_Value)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Application_Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
